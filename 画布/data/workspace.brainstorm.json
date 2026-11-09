@@ -1,0 +1,132 @@
+{
+  "schema_version": 1,
+  "document": {
+    "id": "idea_canvas",
+    "title": "AI 共创脑暴画布",
+    "revision": 4,
+    "updated_at": "2026-09-13T10:30:00.000Z"
+  },
+  "nodes": [
+    {
+      "id": "topic",
+      "kind": "topic",
+      "title": "结构化脑暴",
+      "body": "人自由编辑，Codex 直接修改本地图文件。",
+      "position": {
+        "x": 430,
+        "y": 220
+      },
+      "appearance": {
+        "shape": "topic",
+        "tone": "cyan"
+      }
+    },
+    {
+      "id": "human",
+      "kind": "idea",
+      "title": "人类自由编辑",
+      "body": "新建、拖拽、分组和连线。",
+      "position": {
+        "x": 100,
+        "y": 90
+      },
+      "appearance": {
+        "shape": "rounded",
+        "tone": "blue"
+      }
+    },
+    {
+      "id": "codex",
+      "kind": "claim",
+      "title": "Codex 文件共创",
+      "body": "直接读写 .brainstorm.json。",
+      "position": {
+        "x": 100,
+        "y": 370
+      },
+      "appearance": {
+        "shape": "rect",
+        "tone": "violet"
+      }
+    },
+    {
+      "id": "writing",
+      "kind": "task",
+      "title": "进入真实写作",
+      "body": "导出 Markdown 与结构化上下文。",
+      "position": {
+        "x": 790,
+        "y": 220
+      },
+      "appearance": {
+        "shape": "task",
+        "tone": "emerald"
+      }
+    },
+    {
+      "id": "question",
+      "kind": "question",
+      "title": "如何组织一张复杂关系图？",
+      "body": "自由图、层级图或 UML 式关系图。",
+      "position": {
+        "x": 450,
+        "y": 500
+      },
+      "appearance": {
+        "shape": "hexagon",
+        "tone": "cyan"
+      }
+    },
+    {
+      "id": "evidence",
+      "kind": "evidence",
+      "title": "图片不适合 AI 写作",
+      "body": "Codex 已从本地文件更新这条证据。",
+      "position": {
+        "x": 780,
+        "y": 470
+      },
+      "appearance": {
+        "shape": "document",
+        "tone": "rose"
+      }
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-human-topic",
+      "from": "human",
+      "to": "topic",
+      "relation": "supports",
+      "label": "直接操作"
+    },
+    {
+      "id": "e-codex-topic",
+      "from": "codex",
+      "to": "topic",
+      "relation": "supports",
+      "label": "文件修改"
+    },
+    {
+      "id": "e-topic-writing",
+      "from": "topic",
+      "to": "writing",
+      "relation": "causes",
+      "label": "结构化输出"
+    },
+    {
+      "id": "e-question-topic",
+      "from": "question",
+      "to": "topic",
+      "relation": "related_to",
+      "label": "组织方式"
+    },
+    {
+      "id": "e-evidence-writing",
+      "from": "evidence",
+      "to": "writing",
+      "relation": "supports",
+      "label": "需要代码结构"
+    }
+  ]
+}
